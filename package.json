@@ -1,0 +1,37 @@
+{
+  "name": "dashboard_project",
+  "version": "1.0.0",
+  "main": "/server.ts",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "schema_local": "psql -U postgres -f src/db/schema.sql",
+    "seed_local": "psql -U postgres -f src/db/seed.sql",
+    "schema_production": "psql -d $DATABASE_URL_PRODUCTION -f src/db/schema.sql",
+    "seed_production": "psql -d $DATABASE_URL_PRODUCTION -f src/db/seed.sql",
+    "start": "node --max-old-space-size=8192 dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.11",
+    "pg-promise": "^12.3.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}
