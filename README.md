@@ -12,6 +12,7 @@ This project powers a customizable **user dashboard system**, allowing users to 
 Built with a **modular, scalable architecture**, ideal for production environments and multi-dashboard frontends.
 
 
+
 # 🧱 Tech Stack
 
 | Layer | Technology |
@@ -49,13 +50,13 @@ flowchart TD
         SettingsCtrl --> SettingsQuery[Settings SQL Queries]
     end
 
-    subgraph DB[(PostgreSQL Database)]
-        UsersTable[(dashboards_users)]
-        CitiesTable[(saved_cities)]
-        CryptoTable[(saved_cryptos)]
-        MoviesTable[(saved_movies)]
-        TeamsTable[(saved_sports_teams)]
-        SettingsTable[(user_settings)]
+    subgraph DB[PostgreSQL Database]
+        UsersTable[Table: dashboards_users]
+        CitiesTable[Table: saved_cities]
+        CryptoTable[Table: saved_cryptos]
+        MoviesTable[Table: saved_movies]
+        TeamsTable[Table: saved_sports_teams]
+        SettingsTable[Table: user_settings]
     end
 
     UsersQuery --> UsersTable
