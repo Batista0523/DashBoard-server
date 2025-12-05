@@ -19,6 +19,7 @@ const getAllSavedCities = async (user_id: number): Promise<SavedCities[]> => {
   }
 };
 
+
 const getOneSavedCity = async (
   id: number,
   user_id: number
