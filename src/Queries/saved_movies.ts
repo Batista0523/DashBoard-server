@@ -36,9 +36,9 @@ const getOneSavedMovie = async (
 };
 
 const updateSaveMovie = async (
-  movie: savedMovies,
+  id: number,
   user_id: number,
-  id: number
+  movie: savedMovies
 ): Promise<savedMovies | null> => {
   try {
     const updatedSavedMovie = await db.oneOrNone<savedMovies>(
